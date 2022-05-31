@@ -65,7 +65,8 @@ export class DashboardComponent implements OnInit {
     this.cropperSettingsForCoverImage.canvasHeight = 290;
 
     //my edit
-    this.brandProfileFormSubmitted ? this.createTrialMessage() : null;
+    //this.brandProfileFormSubmitted ? this.createTrialMessage() : null;
+    //auth.wasFirstLogIn() ? this.createTrialMessage() : null;
   }
   
   ngOnInit() {
@@ -93,9 +94,7 @@ export class DashboardComponent implements OnInit {
     });
   }
   createTrialMessage() {
-    this.brandMessage = this.fb.group({
-      ok: ['', [Validators.required]]
-    });
+    this.brandMessage = this.fb.group({});
   }
   inviteEmail() {
     this.inviteEmailForm = this.fb.group({
